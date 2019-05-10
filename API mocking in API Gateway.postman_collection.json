@@ -1,0 +1,1983 @@
+{
+	"info": {
+		"_postman_id": "fd35605b-093f-488c-9334-ac40da05c812",
+		"name": "API mocking in API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API without mocking",
+			"item": [
+				{
+					"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "manage",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Administrator",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-Gateway-APIKey",
+								"value": "88934c5b-a68c-4cc7-994b-4f3fd29e492b ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"name\": \"ram\",\n    \"address\": \"chennai\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6666",
+							"path": [
+								"gateway",
+								"API_Mocking_Demo",
+								"v1",
+								"staticMockedResponse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "mocking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-Gateway-APIKey",
+										"value": "88934c5b-a68c-4cc7-994b-4f3fd29e492b ",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"name\": \"ram\",\n    \"address\": \"chennai\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"staticMockedResponse"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Accept",
+									"value": "application/json"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.11.0"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "a6a7bfae-be1f-487a-8779-4831238d84a5"
+								},
+								{
+									"key": "accept-encoding",
+									"value": "gzip, deflate"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Exception\": \"API Gateway encountered an error. Error Message:  Downtime exception: Connection refused: connect. Request Details: Service - API_Mocking_Demo, Operation - /staticMockedResponse, Invocation Time:3:50:24 PM, Date:May 8, 2019,  Client IP - 0:0:0:0:0:0:0:1, User - Default and Application:null\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Static mock response",
+			"item": [
+				{
+					"name": "JSON mock response",
+					"item": [
+						{
+							"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "json",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": " application/json"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"staticMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "114"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "XML mock response",
+					"item": [
+						{
+							"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/xml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"staticMockedResponse"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "xml",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": " application/xml"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"staticMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/xml"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "120"
+										}
+									],
+									"cookie": [],
+									"body": "<root>\n    <resource>/generateFromExample</resource>\n    <description>Default mocked response from example for status code 200</description>\n</root>"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Query_Parameter",
+					"item": [
+						{
+							"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse?expectedStatusCode=201",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"string\":\"sample string\",\n\"integer\":12,\n\"array\":[1,2,3],\n\"boolean\":true,\n\"json\":{\n\t\"key\":\"value\"\n}\n}"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/dynamicMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"dynamicMockedResponse"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Query_parameter",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": " application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse?expectedStatusCode=201",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"staticMockedResponse"
+											],
+											"query": [
+												{
+													"key": "expectedStatusCode",
+													"value": "201"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"birthday\": 1487350525,\n    \"name\": \"gV\"\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Dynamic Mocking Response",
+			"item": [
+				{
+					"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/dynamicMockedResponse",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"string\":\"sample string\",\n\"integer\":12,\n\"array\":[1,2,3],\n\"boolean\":true,\n\"json\":{\n\t\"key\":\"value\"\n}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/dynamicMockedResponse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6666",
+							"path": [
+								"gateway",
+								"API_Mocking_Demo",
+								"v1",
+								"dynamicMockedResponse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Query_parameter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse?expectedStatusCode=201",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"staticMockedResponse"
+									],
+									"query": [
+										{
+											"key": "expectedStatusCode",
+											"value": "201"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"birthday\": 1487350525,\n    \"name\": \"gV\"\n}"
+						},
+						{
+							"name": "dynamic mocking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"string\":\"sample string\",\n\"integer\":12,\n\"array\":[1,2,3],\n\"boolean\":true,\n\"json\":{\n\t\"key\":\"value\"\n}\n}"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/dynamicMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"dynamicMockedResponse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"string\": \"sample string\",\n    \"integer\": 12,\n    \"array\": [\n        1,\n        2,\n        3\n    ],\n    \"json\": {\n        \"key\": \"value\"\n    },\n    \"boolean\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Condition based mock response",
+			"item": [
+				{
+					"name": "Header Based Condition",
+					"item": [
+						{
+							"name": "mock response without configured condition",
+							"item": [
+								{
+									"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "json",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": " application/json"
+													},
+													{
+														"key": "Content-Type",
+														"type": "text",
+														"value": "application/json",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "6666",
+													"path": [
+														"gateway",
+														"API_Mocking_Demo",
+														"v1",
+														"staticMockedResponse"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "gzip"
+												},
+												{
+													"key": "Content-Length",
+													"value": "114"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+										},
+										{
+											"name": "Without Header",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "Content-Type",
+														"type": "text",
+														"value": "application/json",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "6666",
+													"path": [
+														"gateway",
+														"API_Mocking_Demo",
+														"v1",
+														"conditionBasedMockedResponse"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "gzip"
+												},
+												{
+													"key": "Content-Length",
+													"value": "92"
+												}
+											],
+											"cookie": [],
+											"body": "No condition evaluates to true. \nSo API-Gateway sent this default response."
+										}
+									]
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "mock response configured  condition",
+							"item": [
+								{
+									"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Without Header",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "Content-Type",
+														"type": "text",
+														"value": "application/json",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "6666",
+													"path": [
+														"gateway",
+														"API_Mocking_Demo",
+														"v1",
+														"conditionBasedMockedResponse"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "gzip"
+												},
+												{
+													"key": "Content-Length",
+													"value": "92"
+												}
+											],
+											"cookie": [],
+											"body": "No condition evaluates to true. \nSo API-Gateway sent this default response."
+										},
+										{
+											"name": "with header",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													},
+													{
+														"key": "requestFrom",
+														"type": "text",
+														"value": "API-Portal"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "6666",
+													"path": [
+														"gateway",
+														"API_Mocking_Demo",
+														"v1",
+														"conditionBasedMockedResponse"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "gzip"
+												},
+												{
+													"key": "Content-Length",
+													"value": "100"
+												}
+											],
+											"cookie": [],
+											"body": " Header condition gets evaluated to true.\nAPI Gateway send this condition based mocked response."
+										},
+										{
+											"name": "json",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": " application/json"
+													},
+													{
+														"key": "Content-Type",
+														"type": "text",
+														"value": "application/json",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "6666",
+													"path": [
+														"gateway",
+														"API_Mocking_Demo",
+														"v1",
+														"staticMockedResponse"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "gzip"
+												},
+												{
+													"key": "Content-Length",
+													"value": "114"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+										}
+									]
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Query parameter based condition",
+					"item": [
+						{
+							"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse?queryParam=queryValue",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "requestFrom",
+										"type": "text",
+										"value": "API-Portal",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"status\":\"success\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "with header",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "100"
+										}
+									],
+									"cookie": [],
+									"body": " Header condition gets evaluated to true.\nAPI Gateway send this condition based mocked response."
+								},
+								{
+									"name": "json",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": " application/json"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"staticMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "114"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+								},
+								{
+									"name": "Without Header",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "92"
+										}
+									],
+									"cookie": [],
+									"body": "No condition evaluates to true. \nSo API-Gateway sent this default response."
+								},
+								{
+									"name": "queryparameter based",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse?queryParam=queryValue",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											],
+											"query": [
+												{
+													"key": "queryParam",
+													"value": "queryValue"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "244"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Exception\": \"API Gateway encountered an error. Error Message:  Native service provider error. Code : 400. Request Details: Service - API_Mocking_Demo, Operation - /conditionBasedMockedResponse, Invocation Time:4:30:09 PM, Date:May 8, 2019,  Client IP - 0:0:0:0:0:0:0:1, User - Default and Application:null\"\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Body Based condition",
+					"item": [
+						{
+							"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "Response payload will be uppercase"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "json",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": " application/json"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"staticMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "114"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+								},
+								{
+									"name": "with header",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "100"
+										}
+									],
+									"cookie": [],
+									"body": " Header condition gets evaluated to true.\nAPI Gateway send this condition based mocked response."
+								},
+								{
+									"name": "queryparameter based",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse?queryParam=queryValue",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											],
+											"query": [
+												{
+													"key": "queryParam",
+													"value": "queryValue"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "244"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Exception\": \"API Gateway encountered an error. Error Message:  Native service provider error. Code : 400. Request Details: Service - API_Mocking_Demo, Operation - /conditionBasedMockedResponse, Invocation Time:4:30:09 PM, Date:May 8, 2019,  Client IP - 0:0:0:0:0:0:0:1, User - Default and Application:null\"\n}"
+								},
+								{
+									"name": "Without Header",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"type": "text",
+												"value": "application/json",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Content-Length",
+											"value": "92"
+										}
+									],
+									"cookie": [],
+									"body": "No condition evaluates to true. \nSo API-Gateway sent this default response."
+								},
+								{
+									"name": "body based condition",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "requestFrom",
+												"type": "text",
+												"value": "API-Portal",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\"status\":\"success\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6666",
+											"path": [
+												"gateway",
+												"API_Mocking_Demo",
+												"v1",
+												"conditionBasedMockedResponse"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "mockedResponse",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "ESB (webmethods IS service) driven mock response",
+			"item": [
+				{
+					"name": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Response payload will be uppercase"
+						},
+						"url": {
+							"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6666",
+							"path": [
+								"gateway",
+								"API_Mocking_Demo",
+								"v1",
+								"conditionBasedMockedResponse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "queryparameter based",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "requestFrom",
+										"type": "text",
+										"value": "API-Portal",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse?queryParam=queryValue",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									],
+									"query": [
+										{
+											"key": "queryParam",
+											"value": "queryValue"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Exception\": \"API Gateway encountered an error. Error Message:  Native service provider error. Code : 400. Request Details: Service - API_Mocking_Demo, Operation - /conditionBasedMockedResponse, Invocation Time:4:30:09 PM, Date:May 8, 2019,  Client IP - 0:0:0:0:0:0:0:1, User - Default and Application:null\"\n}"
+						},
+						{
+							"name": "Without Header",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								}
+							],
+							"cookie": [],
+							"body": "No condition evaluates to true. \nSo API-Gateway sent this default response."
+						},
+						{
+							"name": "body based condition",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "requestFrom",
+										"type": "text",
+										"value": "API-Portal",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"status\":\"success\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "mockedResponse",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "ESB service",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "Response payload will be uppercase"
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								}
+							],
+							"cookie": [],
+							"body": "RESPONSE PAYLOAD WILL BE UPPERCASE"
+						},
+						{
+							"name": "json",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": " application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/staticMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"staticMockedResponse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resource\": \"/generateFromExample\",\n    \"description\": \"Default mocked response from example for status code 200\"\n}"
+						},
+						{
+							"name": "with header",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "requestFrom",
+										"type": "text",
+										"value": "API-Portal"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:6666/gateway/API_Mocking_Demo/v1/conditionBasedMockedResponse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6666",
+									"path": [
+										"gateway",
+										"API_Mocking_Demo",
+										"v1",
+										"conditionBasedMockedResponse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								}
+							],
+							"cookie": [],
+							"body": " Header condition gets evaluated to true.\nAPI Gateway send this condition based mocked response."
+						}
+					]
+				}
+			]
+		}
+	]
+}
